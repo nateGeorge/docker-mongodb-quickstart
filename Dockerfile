@@ -1,7 +1,10 @@
 FROM ubuntu:18.04
 
+# https://github.com/wv-gis/mudak-wrm-public/issues/2#issuecomment-461250514
+ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
+
 RUN apt-get update
-RUN apt-get install gnupg ca-certificates -y #gnupg2 gnupg1 -y
+RUN apt-get install wget apt-utils gnupg ca-certificates -y
 
 # install MongoDB CE
 # https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
