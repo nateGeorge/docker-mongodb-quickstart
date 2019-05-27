@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 
 RUN apt-get update
-RUN apt-get install wget apt-utils gnupg ca-certificates -y
+RUN apt-get install unzip wget apt-utils gnupg ca-certificates -y
 
 # install MongoDB CE
 # https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
